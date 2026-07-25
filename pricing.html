@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing &amp; FAQ — PulseOps AI</title>
+  <meta name="description" content="PulseOps AI pricing from $49/mo. Starter, Pro, and Enterprise tiers with autonomous SOC automation. FAQ on deployment, security, and billing.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pulseops-ai.vercel.app/pricing.html">
+  <meta property="og:title" content="Pricing &amp; FAQ — PulseOps AI">
+  <meta property="og:description" content="Transparent pricing for autonomous cloud SOC automation. Plans from $49/mo with 20% annual savings.">
+  <meta property="og:image" content="https://pulseops-ai.vercel.app/assets/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://pulseops-ai.vercel.app/pricing.html">
+  <meta name="twitter:title" content="Pricing &amp; FAQ — PulseOps AI">
+  <meta name="twitter:description" content="Transparent pricing for autonomous cloud SOC automation. Plans from $49/mo.">
+  <meta name="twitter:image" content="https://pulseops-ai.vercel.app/assets/og-image.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data: Product & FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://pulseops-ai.vercel.app/#organization",
+        "name": "PulseOps AI Inc.",
+        "url": "https://pulseops-ai.vercel.app",
+        "logo": "https://pulseops-ai.vercel.app/assets/logo.png"
+      },
+      {
+        "@type": "Product",
+        "name": "PulseOps AI Pro Plan",
+        "image": "https://pulseops-ai.vercel.app/assets/og-image.png",
+        "description": "Autonomous SOC Incident Response Engine for Enterprise Cloud Accounts.",
+        "offers": {
+          "@type": "Offer",
+          "price": "149.00",
+          "priceCurrency": "USD",
+          "priceValidUntil": "2027-12-31",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does PulseOps AI integrate with my AWS environment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PulseOps deploys via Terraform cross-account IAM roles in under 15 minutes. It auto-discovers your fleet and ingests GuardDuty and CloudTrail streams without agent overhead."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is PulseOps AI SOC2 Type II and ISO 27001 compliant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. PulseOps AI maintains SOC2 Type II and ISO 27001 certifications with export-ready audit logs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the 14-day free trial work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All plans include a 14-day free trial with full access to remediation modules. No credit card required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I write custom Python Boto3 playbooks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Pro and Enterprise plans include the Custom Playbook Engine with built-in Python/Boto3 IDE and dry-run mode."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" style="position: absolute; top: -100px; left: 1rem; z-index: 9999; background: var(--accent-cyan); color: #000; padding: 0.5rem 1rem; font-weight: 700; transition: top 0.2s;" onfocus="this.style.top='1rem'" onblur="this.style.top='-100px'">Skip to main content</a>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="PulseOps AI Home">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="url(#logoGrad)"/>
+          <path d="M18 8L26 14V24L18 30L10 24V14L18 8Z" stroke="#00f2fe" stroke-width="1.5" fill="rgba(0,242,254,0.1)"/>
+          <path d="M18 13L22 16V22L18 25L14 22V16L18 13Z" fill="#00f2fe"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="36" y2="36">
+              <stop stop-color="#141b27"/>
+              <stop offset="1" stop-color="#0d111a"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        PulseOps AI
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="product.html" class="nav-link">Product Architecture</a></li>
+          <li><a href="pricing.html" class="nav-link active">Pricing &amp; FAQ</a></li>
+          <li><a href="contact.html" class="nav-link">Contact &amp; Demo</a></li>
+        </ul>
+        <div class="header-cta">
+          <a href="contact.html" class="btn-primary btn-sm">Book Demo</a>
+        </div>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <nav class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile navigation">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="product.html" class="nav-link">Product Architecture</a>
+    <a href="pricing.html" class="nav-link active">Pricing &amp; FAQ</a>
+    <a href="contact.html" class="nav-link">Contact &amp; Demo</a>
+    <a href="contact.html" class="btn-primary">Book Demo</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="pricing-hero" aria-labelledby="pricing-hero-title">
+      <div class="container">
+        <span class="badge">Transparent Pricing</span>
+        <h1 id="pricing-hero-title">Simple, Predictable Cloud Security <span class="text-gradient">| No Per-User Seat Fees</span></h1>
+        <p>Every plan includes autonomous remediation, GuardDuty integration, and Terraform deployment modules. No hidden fees.</p>
+        
+        <!-- Interactive Monthly / Annual Billing Toggle Switch -->
+        <div class="billing-toggle-wrap">
+          <span class="billing-label active" id="monthly-label">Billed Monthly</span>
+          <label class="toggle-switch" aria-label="Toggle annual billing">
+            <input type="checkbox" id="billing-toggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="billing-label" id="annual-label">Billed Annually</span>
+          <span class="save-badge" id="save-badge">Save 20%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 Pricing Tier Cards Grid -->
+    <section class="section" style="padding-top: 0;" aria-label="Pricing Tier Cards">
+      <div class="container">
+        <div class="pricing-grid">
+
+          <!-- Tier 1: Starter -->
+          <article class="pricing-card glass-card">
+            <div class="pricing-tier">Starter</div>
+            <div class="pricing-price">
+              <span class="currency">$</span>
+              <span class="amount" id="price-starter">49</span>
+              <span class="period" id="period-starter">/ month</span>
+            </div>
+            <p class="pricing-desc">For small teams protecting up to 5 AWS accounts with core remediation playbooks.</p>
+            <ul class="pricing-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Up to 5 AWS Accounts
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                1,000 Events/sec Processing
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Slack &amp; Discord Alerts
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                EC2 Port Auditor &amp; S3 Lockdown
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Email Support (24h SLA)
+              </li>
+            </ul>
+            <a href="contact.html" class="btn-secondary" aria-label="Get Started with Starter Tier">Get Started</a>
+          </article>
+
+          <!-- Tier 2: Pro (Featured) -->
+          <article class="pricing-card glass-card featured">
+            <div class="pricing-tier">Pro</div>
+            <div class="pricing-price">
+              <span class="currency">$</span>
+              <span class="amount" id="price-pro">149</span>
+              <span class="period" id="period-pro">/ month</span>
+            </div>
+            <p class="pricing-desc">For growing security teams managing multi-account AWS Organizations with custom playbooks.</p>
+            <ul class="pricing-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Up to 25 Accounts
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                10,000 Events/sec Processing
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Custom Boto3 Python Playbooks
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                IAM Engine Least Privilege Audit
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                24/7 Priority Support &amp; SLA
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Compliance audit exports
+              </li>
+            </ul>
+            <a href="contact.html" class="btn-primary" aria-label="Start Pro Trial">Start Pro Trial</a>
+          </article>
+
+          <!-- Tier 3: Enterprise -->
+          <article class="pricing-card glass-card">
+            <div class="pricing-tier">Enterprise</div>
+            <div class="pricing-price">
+              <span class="custom-price">Custom</span>
+            </div>
+            <p class="pricing-desc">For large organizations requiring unlimited scale, compliance packs, and white-glove onboarding.</p>
+            <ul class="pricing-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Unlimited Accounts &amp; Events
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                SOC2 Compliance Pack
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Custom SLA &amp; BAA Contracts
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Dedicated VPC deployment
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                SAML SSO &amp; RBAC
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Dedicated SOC Architect
+              </li>
+            </ul>
+            <a href="contact.html" class="btn-secondary" aria-label="Contact Sales for Enterprise">Contact Sales</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Single Single FAQ Heading & Accordion Section -->
+    <section class="section" aria-labelledby="faq-main-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Got Questions?</span>
+          <h2 id="faq-main-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-section">
+          <div class="faq-list">
+
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+              <button class="faq-header" type="button" aria-expanded="false">
+                <span>How does PulseOps AI integrate with my AWS environment?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq-body">
+                <div class="faq-body-inner">
+                  PulseOps deploys via Terraform cross-account IAM roles in under 15 minutes. It auto-discovers your fleet, ingests GuardDuty and CloudTrail streams, and deploys remediation Lambda functions — no agents required on EC2 instances.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+              <button class="faq-header" type="button" aria-expanded="false">
+                <span>Is PulseOps AI SOC2 Type II and ISO 27001 compliant?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq-body">
+                <div class="faq-body-inner">
+                  Yes. PulseOps AI maintains SOC2 Type II and ISO 27001 certifications. Enterprise plans include the SOC2 Compliance Pack, HIPAA BAA options, and export-ready audit trails for PCI-DSS mapped controls.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+              <button class="faq-header" type="button" aria-expanded="false">
+                <span>How does the 14-day free trial work?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq-body">
+                <div class="faq-body-inner">
+                  All plans include a 14-day free trial with full access to remediation modules. No credit card required. Connect one production AWS account to validate real-world MTTR metrics and run unlimited breach simulations in our sandbox environment.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+              <button class="faq-header" type="button" aria-expanded="false">
+                <span>Can I write custom Python Boto3 playbooks?</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq-body">
+                <div class="faq-body-inner">
+                  Yes. Pro and Enterprise plans include the Custom Playbook Engine with a built-in Python/Boto3 IDE. Write, version, and test playbooks with dry-run mode before enabling auto-remediation. Playbooks support conditional logic, multi-step workflows, and Slack or Discord webhook notifications.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Single Single CTA Banner Section -->
+    <section class="section" style="padding-top: 0;" aria-label="Call to Action Banner">
+      <div class="container">
+        <div class="cta-banner glass-card">
+          <h2>Start Your 14-Day Free SOC Trial Today</h2>
+          <p>Join 500+ security teams protecting their AWS infrastructure with PulseOps AI.</p>
+          <a href="contact.html" class="btn-primary" aria-label="Book a Demo">Book a Demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mandatory Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 PulseOps AI Inc. All rights reserved.</p>
+        <p>
+          <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer" class="credit-link">
+            Built for Digital Heroes Training Task
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

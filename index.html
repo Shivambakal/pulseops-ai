@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseOps AI — Autonomous Cloud SOC Automation</title>
+  <meta name="description" content="PulseOps AI automates cloud incident response with Boto3 playbooks. Detect AWS threats in seconds, remediate in under 2s MTTR.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pulseops-ai.vercel.app/">
+  <meta property="og:title" content="PulseOps AI — Autonomous Cloud SOC Automation">
+  <meta property="og:description" content="Autonomous AI-powered Cloud Security and SOC Incident Response. Detect misconfigurations and execute Boto3 playbooks in seconds.">
+  <meta property="og:image" content="https://pulseops-ai.vercel.app/assets/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://pulseops-ai.vercel.app/">
+  <meta name="twitter:title" content="PulseOps AI — Autonomous Cloud SOC Automation">
+  <meta name="twitter:description" content="Autonomous AI-powered Cloud Security and SOC Incident Response Platform.">
+  <meta name="twitter:image" content="https://pulseops-ai.vercel.app/assets/og-image.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data: Organization & SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://pulseops-ai.vercel.app/#organization",
+        "name": "PulseOps AI Inc.",
+        "url": "https://pulseops-ai.vercel.app",
+        "logo": "https://pulseops-ai.vercel.app/assets/logo.png",
+        "sameAs": [
+          "https://twitter.com/pulseopsai",
+          "https://github.com/pulseopsai",
+          "https://linkedin.com/company/pulseopsai"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://pulseops-ai.vercel.app/#software",
+        "name": "PulseOps SOC Engine",
+        "operatingSystem": "Cloud-Native (AWS, Azure, GCP)",
+        "applicationCategory": "SecurityApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "49.00",
+          "priceCurrency": "USD"
+        },
+        "description": "Automated Cloud Incident Response and Autonomous SOC Platform for Enterprise DevOps."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" style="position: absolute; top: -100px; left: 1rem; z-index: 9999; background: var(--accent-cyan); color: #000; padding: 0.5rem 1rem; font-weight: 700; transition: top 0.2s;" onfocus="this.style.top='1rem'" onblur="this.style.top='-100px'">Skip to main content</a>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="PulseOps AI Home">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="url(#logoGrad)"/>
+          <path d="M18 8L26 14V24L18 30L10 24V14L18 8Z" stroke="#00f2fe" stroke-width="1.5" fill="rgba(0,242,254,0.1)"/>
+          <path d="M18 13L22 16V22L18 25L14 22V16L18 13Z" fill="#00f2fe"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="36" y2="36">
+              <stop stop-color="#141b27"/>
+              <stop offset="1" stop-color="#0d111a"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        PulseOps AI
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="product.html" class="nav-link">Product Architecture</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing &amp; FAQ</a></li>
+          <li><a href="contact.html" class="nav-link">Contact &amp; Demo</a></li>
+        </ul>
+        <div class="header-cta">
+          <a href="contact.html" class="btn-primary btn-sm" aria-label="Book Demo with PulseOps AI">Book Demo</a>
+        </div>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <nav class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile navigation">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="product.html" class="nav-link">Product Architecture</a>
+    <a href="pricing.html" class="nav-link">Pricing &amp; FAQ</a>
+    <a href="contact.html" class="nav-link">Contact &amp; Demo</a>
+    <a href="contact.html" class="btn-primary">Book Demo</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="badge">⚡ AUTONOMOUS CLOUD SOC AUTOMATION</span>
+            <h1 class="hero-title" id="hero-title">Stop Cloud Breaches <span class="text-gradient">Before They Spread</span></h1>
+            <p class="hero-subtitle">PulseOps AI ingests GuardDuty and CloudTrail telemetry, detects misconfigurations in real time, and executes Boto3 remediation playbooks autonomously — sub-2-second MTTR across your entire AWS fleet.</p>
+            <div class="hero-actions">
+              <a href="contact.html" class="btn-primary" aria-label="Start Free Trial">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+                Start Free Trial
+              </a>
+              <a href="product.html" class="btn-secondary" aria-label="View Product Architecture">View Architecture</a>
+            </div>
+            <div class="hero-trust">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+              SOC 2 Type II · ISO 27001 · AWS Security Competency Partner
+            </div>
+          </div>
+
+          <!-- Code Window Terminal Breach Simulator -->
+          <div class="hero-visual">
+            <div class="terminal-window animate-float" aria-label="Live Boto3 Remediation Playbook Simulator">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot red"></span>
+                  <span class="terminal-dot yellow"></span>
+                  <span class="terminal-dot green"></span>
+                </div>
+                <span class="terminal-title">aws_remediation_playbook.py</span>
+                <span class="terminal-status-badge status-idle" id="terminal-status-badge">ENGINE ACTIVE</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-code">
+                  <div><span class="kw">import</span> boto3</div>
+                  <div>ec2 = boto3.client(<span class="str">'ec2'</span>, region_name=<span class="str">'us-east-1'</span>)</div>
+                  <div><span class="kw">def</span> <span class="fn">revoke_security_group_ingress</span>(sg_id):</div>
+                  <div>&nbsp;&nbsp;<span class="cm"># Revoke 0.0.0.0/0 SSH rule automatically</span></div>
+                  <div>&nbsp;&nbsp;ec2.revoke_security_group_ingress(</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;GroupId=sg_id, IpProtocol=<span class="str">'tcp'</span>,</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;FromPort=22, ToPort=22, CidrIp=<span class="str">'0.0.0.0/0'</span></div>
+                  <div>&nbsp;&nbsp;)</div>
+                </div>
+                <div class="terminal-log" id="terminal-log-output" aria-live="polite"></div>
+              </div>
+              <div class="terminal-footer">
+                <button class="btn-primary" id="trigger-simulation-btn" type="button" aria-label="Trigger Security Breach Simulation">Trigger Security Breach Simulation</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Metrics Section -->
+    <section class="section" aria-label="Key Security Metrics">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card glass-card">
+            <div class="metric-value">99.99%</div>
+            <div class="metric-label">Platform SLA Uptime</div>
+          </div>
+          <div class="metric-card glass-card">
+            <div class="metric-value">&lt;2s</div>
+            <div class="metric-label">Mean Time to Remediate</div>
+          </div>
+          <div class="metric-card glass-card">
+            <div class="metric-value">500+</div>
+            <div class="metric-label">AWS Fleets Protected</div>
+          </div>
+          <div class="metric-card glass-card">
+            <div class="metric-value">10M+</div>
+            <div class="metric-label">Events Processed Daily</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Capabilities Grid -->
+    <section class="section" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Platform Capabilities</span>
+          <h2 id="features-title">Built for <span class="text-gradient">Zero-Trust Cloud Operations</span></h2>
+          <p>Every module is engineered for autonomous detection, instant remediation, and full audit compliance — no human in the loop required.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card glass-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Real-Time Threat Detection</h3>
+            <p>Continuous ingestion of GuardDuty, CloudTrail, and Config streams with ML-powered anomaly scoring across 200+ AWS resource types.</p>
+          </article>
+          <article class="feature-card glass-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3>Autonomous Boto3 Playbooks</h3>
+            <p>Pre-built and custom remediation scripts execute instantly — revoke SG rules, lock S3 buckets, rotate IAM keys, and isolate EC2 instances.</p>
+          </article>
+          <article class="feature-card glass-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3>Unified SOC Dashboard</h3>
+            <p>Single pane of glass for incident timelines, playbook execution logs, compliance posture scores, and fleet-wide security metrics.</p>
+          </article>
+          <article class="feature-card glass-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <h3>Compliance Audit Trails</h3>
+            <p>Immutable incident logs mapped to SOC 2, ISO 27001, and PCI-DSS controls. Export-ready reports for auditors and CISO reviews.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section" aria-label="Customer Testimonial">
+      <div class="container">
+        <div class="testimonial-card glass-card">
+          <p class="testimonial-quote">"PulseOps cut our MTTR from 47 minutes to under 2 seconds. The Boto3 playbook engine revoked a critical SG breach before our on-call engineer even got paged."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">SK</div>
+            <div class="testimonial-info">
+              <strong>Sarah Kim</strong>
+              <span>VP of Cloud Security, NexaScale Technologies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner Section -->
+    <section class="section" aria-label="Call to Action Banner">
+      <div class="container">
+        <div class="cta-banner glass-card">
+          <h2>Ready to <span class="text-gradient">Automate Your Cloud SOC?</span></h2>
+          <p>Connect your AWS account via cross-account IAM role. PulseOps auto-discovers your fleet, enables GuardDuty integration, and deploys remediation Lambdas via Terraform.</p>
+          <a href="contact.html" class="btn-primary" aria-label="Schedule a Live Demo">Schedule a Live Demo</a>
+          <p class="cta-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+            Infrastructure-as-Code deployment via Terraform modules included
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mandatory Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 PulseOps AI Inc. All rights reserved.</p>
+        <p>
+          <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer" class="credit-link">
+            Built for Digital Heroes Training Task
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
