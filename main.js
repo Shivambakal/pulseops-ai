@@ -1,11 +1,13 @@
 /**
- * PulseOps AI — Core Vanilla JavaScript
- * Zero external libraries | 100/100 Core Web Vitals Ready
+ * PulseOps AI — Core Vanilla JavaScript & Agency-Grade Motion Engine
+ * Zero external dependencies | Hardware-Accelerated Animations | 100/100 Core Web Vitals Ready
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initActiveNavLink();
+  initCursorSpotlight();
+  initScrollObserver();
   initTerminalSimulator();
   initBillingToggle();
   initFaqAccordion();
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --------------------------------------------------------------------------
-   1. Mobile Navigation Drawer
+   1. Mobile Navigation Drawer Handler
    -------------------------------------------------------------------------- */
 function initMobileNav() {
   const toggleBtn = document.getElementById('mobile-menu-btn');
@@ -60,75 +62,132 @@ function initActiveNavLink() {
 }
 
 /* --------------------------------------------------------------------------
-   3. Interactive Terminal Breach Simulator (index.html)
+   3. Cursor Spotlight Tracking on Glass Cards
    -------------------------------------------------------------------------- */
-function initTerminalSimulator() {
-  const triggerBtn = document.getElementById('trigger-simulation-btn');
-  const statusBadge = document.getElementById('terminal-status-badge');
-  const logOutput = document.getElementById('terminal-log-output');
-
-  if (!triggerBtn || !statusBadge || !logOutput) return;
-
-  let simRunning = false;
-
-  const IDLE_LOG = '[MONITORING]: GuardDuty & CloudTrail streams active (0ms latency).';
-  const CRITICAL_LOG = '[🔴 ALERT 12:44:02]: Unauthorized Port 22 (SSH) open to 0.0.0.0/0 on sg-09423f8c.';
-  const ACTION_LOG = '[⚡ ACTION 12:44:03]: Executing Boto3 playbook: revoke_security_group_ingress()...';
-  const SUCCESS_LOG = '[🟢 SUCCESS 12:44:03.4]: Port 22 revoked via Boto3. Audit log committed to CloudTrail.';
-
-  function setStatus(text, className) {
-    statusBadge.textContent = text;
-    statusBadge.className = 'terminal-status-badge ' + className;
-  }
-
-  function appendLog(text, className) {
-    const line = document.createElement('div');
-    line.className = 'terminal-log-line ' + (className || 'info');
-    line.textContent = text;
-    logOutput.appendChild(line);
-    logOutput.scrollTop = logOutput.scrollHeight;
-  }
-
-  function resetSimulator() {
-    simRunning = false;
-    logOutput.innerHTML = '';
-    appendLog(IDLE_LOG, 'info');
-    setStatus('ENGINE ACTIVE', 'status-idle');
-    triggerBtn.disabled = false;
-    triggerBtn.textContent = 'Trigger Security Breach Simulation';
-  }
-
-  // Initial state setup
-  resetSimulator();
-
-  triggerBtn.addEventListener('click', () => {
-    if (simRunning) {
-      resetSimulator();
-      return;
-    }
-
-    simRunning = true;
-    triggerBtn.disabled = true;
-
-    setStatus('THREAT DETECTED', 'status-threat');
-    appendLog(CRITICAL_LOG, 'critical');
-
-    setTimeout(() => {
-      setStatus('REMEDIATING...', 'status-remediating');
-      appendLog(ACTION_LOG, 'action');
-    }, 500);
-
-    setTimeout(() => {
-      setStatus('REMEDIATED: Port 22 Closed via Boto3 (1.4s)', 'status-neutralized');
-      appendLog(SUCCESS_LOG, 'success');
-      triggerBtn.disabled = false;
-      triggerBtn.textContent = 'Reset Simulation';
-    }, 1200);
+function initCursorSpotlight() {
+  document.addEventListener('mousemove', (e) => {
+    const cards = document.querySelectorAll('.glass-card');
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
   });
 }
 
 /* --------------------------------------------------------------------------
-   4. Functional Billing Toggle (pricing.html)
+   4. Scroll-Triggered Entrance Animations (IntersectionObserver)
+   -------------------------------------------------------------------------- */
+function initScrollObserver() {
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -40px 0px'
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+    revealObserver.observe(el);
+  });
+}
+
+/* --------------------------------------------------------------------------
+   5. Interactive IDE Terminal & Real-Time Breach Simulator (index.html)
+   -------------------------------------------------------------------------- */
+function initTerminalSimulator() {
+  const simBtn = document.getElementById('trigger-simulation-btn');
+  const terminalLogs = document.getElementById('terminal-log-output');
+  const statusBadge = document.getElementById('terminal-status-badge');
+
+  if (!simBtn || !terminalLogs || !statusBadge) return;
+
+  let isSimulating = false;
+
+  const initialLog = document.createElement('div');
+  initialLog.className = 'terminal-log-line';
+  initialLog.style.color = 'var(--text-secondary)';
+  initialLog.textContent = '[MONITORING]: GuardDuty & CloudTrail streams active (0ms latency).';
+  terminalLogs.appendChild(initialLog);
+
+  simBtn.addEventListener('click', () => {
+    if (isSimulating) {
+      // Reset simulator
+      isSimulating = false;
+      terminalLogs.innerHTML = '';
+      const resetLog = document.createElement('div');
+      resetLog.className = 'terminal-log-line';
+      resetLog.style.color = 'var(--text-secondary)';
+      resetLog.textContent = '[MONITORING]: GuardDuty & CloudTrail streams active (0ms latency).';
+      terminalLogs.appendChild(resetLog);
+
+      statusBadge.textContent = 'ENGINE ACTIVE';
+      statusBadge.className = 'terminal-status-badge status-idle';
+      simBtn.disabled = false;
+      simBtn.style.opacity = '1';
+      simBtn.textContent = 'Trigger Security Breach Simulation';
+      return;
+    }
+
+    isSimulating = true;
+    simBtn.disabled = true;
+    simBtn.style.opacity = '0.6';
+
+    statusBadge.textContent = 'THREAT DETECTED';
+    statusBadge.className = 'terminal-status-badge status-threat';
+
+    const logs = [
+      { text: '[🔴 CRITICAL 13:48:02]: Unauthorized Port 22 (SSH) opened on sg-09423f8c to 0.0.0.0/0', color: 'var(--accent-crimson)' },
+      { text: '[⚡ ACTION 13:48:03]: Triggering Boto3 playbook: revoke_security_group_ingress()...', color: 'var(--accent-amber)' },
+      { text: '[🟢 SUCCESS 13:48:04]: Port 22 revoked. Ingress security policy enforced in 1.2s.', color: 'var(--accent-emerald)' }
+    ];
+
+    terminalLogs.innerHTML = '';
+
+    logs.forEach((log, index) => {
+      setTimeout(() => {
+        const line = document.createElement('div');
+        line.className = 'terminal-log-line';
+        line.style.color = log.color;
+        line.style.opacity = '0';
+        line.style.transform = 'translateX(-10px)';
+        line.style.transition = 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+        line.textContent = log.text;
+        terminalLogs.appendChild(line);
+        terminalLogs.scrollTop = terminalLogs.scrollHeight;
+
+        setTimeout(() => {
+          line.style.opacity = '1';
+          line.style.transform = 'translateX(0)';
+        }, 50);
+
+        if (index === 1) {
+          statusBadge.textContent = 'REMEDIATING...';
+          statusBadge.className = 'terminal-status-badge status-remediating';
+        }
+
+        if (index === logs.length - 1) {
+          statusBadge.textContent = 'NEUTRALIZED (1.2s)';
+          statusBadge.className = 'terminal-status-badge status-neutralized';
+          simBtn.disabled = false;
+          simBtn.style.opacity = '1';
+          simBtn.textContent = 'Reset Simulation';
+        }
+      }, index * 600);
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   6. Functional Billing Toggle Switcher (pricing.html)
    -------------------------------------------------------------------------- */
 function initBillingToggle() {
   const toggle = document.getElementById('billing-toggle');
@@ -178,7 +237,7 @@ function initBillingToggle() {
 }
 
 /* --------------------------------------------------------------------------
-   5. Functional FAQ Accordion (pricing.html)
+   7. Functional FAQ Accordion (pricing.html)
    -------------------------------------------------------------------------- */
 function initFaqAccordion() {
   const faqItems = document.querySelectorAll('.faq-item');
@@ -193,7 +252,6 @@ function initFaqAccordion() {
     header.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
-      // Close other accordion items
       faqItems.forEach((other) => {
         if (other !== item) {
           other.classList.remove('active');
@@ -204,7 +262,6 @@ function initFaqAccordion() {
         }
       });
 
-      // Toggle current item
       if (isActive) {
         item.classList.remove('active');
         header.setAttribute('aria-expanded', 'false');
@@ -219,7 +276,7 @@ function initFaqAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   6. Demo Booking Form Submission Handler (contact.html)
+   8. Demo Booking Form Submission Handler (contact.html)
    -------------------------------------------------------------------------- */
 function initDemoForm() {
   const form = document.getElementById('demo-booking-form');
@@ -255,8 +312,6 @@ function initDemoForm() {
       `;
 
       form.reset();
-
-      // Smooth scroll toast into view
       toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }, 800);
   });

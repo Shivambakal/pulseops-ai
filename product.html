@@ -52,6 +52,10 @@
   </script>
 </head>
 <body>
+  <!-- Ambient Background Glowing Mesh Orbs -->
+  <div class="ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow-2" aria-hidden="true"></div>
+
   <!-- Accessibility Skip Link -->
   <a href="#main-content" class="skip-link" style="position: absolute; top: -100px; left: 1rem; z-index: 9999; background: var(--accent-cyan); color: #000; padding: 0.5rem 1rem; font-weight: 700; transition: top 0.2s;" onfocus="this.style.top='1rem'" onblur="this.style.top='-100px'">Skip to main content</a>
 
@@ -104,7 +108,7 @@
 
   <!-- Main Content -->
   <main id="main-content">
-    <section class="page-hero" aria-labelledby="product-hero-title">
+    <section class="page-hero reveal-on-scroll" aria-labelledby="product-hero-title">
       <div class="container">
         <span class="badge">System Architecture</span>
         <h1 id="product-hero-title">Zero-Latency Telemetry Architecture — <span class="text-gradient">Enterprise Cloud Detection &amp; Response Engine</span></h1>
@@ -115,7 +119,7 @@
     <!-- 3-Step Automated Remediation Pipeline Showcase -->
     <section class="section" style="padding-top: 0;" aria-label="3-Step Remediation Pipeline">
       <div class="container">
-        <div class="pipeline-grid">
+        <div class="pipeline-grid reveal-on-scroll reveal-stagger">
           
           <!-- Step 1: Ingestion -->
           <article class="pipeline-card glass-card">
@@ -170,12 +174,12 @@
     <!-- Deep Dive Security Modules -->
     <section class="section" aria-labelledby="modules-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal-on-scroll">
           <span class="badge">Deep Dive Modules</span>
           <h2 id="modules-title">Production-Grade <span class="text-gradient">Security Modules</span></h2>
           <p>Each module ships with pre-built playbooks, configurable thresholds, and full Terraform deployment templates.</p>
         </div>
-        <div class="deep-dive-grid">
+        <div class="deep-dive-grid reveal-on-scroll reveal-stagger">
           <article class="deep-dive-card glass-card">
             <div class="feature-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -218,12 +222,12 @@
     <!-- Technical Specs Comparison Table Section -->
     <section class="section" style="padding-top: 0;" aria-labelledby="specs-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal-on-scroll">
           <span class="badge">Competitive Analysis</span>
           <h2 id="specs-title">PulseOps vs. <span class="text-gradient">Traditional Approaches</span></h2>
           <p>See why security teams are replacing manual SOC workflows and legacy SIEM alert fatigue with autonomous remediation.</p>
         </div>
-        <div class="comparison-table-wrap glass-card" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+        <div class="comparison-table-wrap glass-card reveal-on-scroll" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
           <table class="comparison-table" style="min-width: 620px;">
             <thead>
               <tr>
@@ -273,7 +277,7 @@
     <!-- Bottom CTA -->
     <section class="section" aria-label="Call to Action">
       <div class="container">
-        <div class="cta-banner glass-card">
+        <div class="cta-banner glass-card reveal-on-scroll">
           <h2>See the Architecture <span class="text-gradient">In Action</span></h2>
           <p>Book a 30-minute technical deep dive with our SOC architects. We'll walk through live remediation of a simulated AWS breach on your terms.</p>
           <a href="contact.html" class="btn-primary" aria-label="Book Technical Demo">Book Technical Demo</a>
